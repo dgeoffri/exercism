@@ -27,8 +27,7 @@ color_code:
 .l1:
 		lea	rcx, [rel color_array]
 		mov	rsi, [rcx + rbx * 8]
-		mov	rax, [rsi]
-		test	rax, rax
+		test	rsi, rsi
 		jz	.failed
 		push	rdi
 		call	compare
