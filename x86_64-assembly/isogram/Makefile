@@ -2,13 +2,13 @@ CFLAGS=-g
 
 all: test
 
-resistor-color.o: resistor-color.asm
+isogram.o: isogram.asm
 	nasm -f elf64 $<
 
-test: resistor-color.o test.c
+test: isogram.o test.c
 #	$(CC) ($CFLAGS) -o $ test resistor-color.o test.c
 
 clean:
-	-rm -rf test resistor-color.o
+	-rm -rf test isogram.o
 
 .PHONY: all clean
